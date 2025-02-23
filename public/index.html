@@ -111,10 +111,55 @@
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
+        .luxury-banner {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            background: url('unique-image-url.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .luxury-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            animation: luxuryFadeIn 2s ease-in-out;
+        }
+        .luxury-banner h1 {
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: bold;
+            animation: luxurySlideIn 1.5s ease-in-out;
+        }
+        @keyframes luxuryFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes luxurySlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .luxury-banner h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header> Adult Toy Shop</header>
+    <div class="luxury-banner">
+        <h1>Welcome to Sensual Elegance</h1><img src="images\bedroom essentials.webp" alt="bedroom essentials">
+    </div>
     <center><h1 style="text-align:center; color:#ff4b2b; font-family:'Poppins', sans-serif;">
         ❤️ With Love, From Keshava ❤️ and Dark House
     </h1>
