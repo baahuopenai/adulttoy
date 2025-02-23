@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - UPI Payment & Address</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+        .checkout-container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .qr-code img {
+            width: 200px;
+            margin: 10px 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #ff4b2b;
+            color: white;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #ff416c;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Complete Your Purchase</h2>
+        
+        <h3>UPI Payment</h3>
+        <div class="qr-code">
+            <img src="your-upi-qr-code.png" alt="Scan to Pay" />
+        </div>
+        <p>Scan the QR Code or use UPI ID: <b>your-upi@upi</b></p>
+
+        <h3>Enter Your Address</h3>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <textarea placeholder="Enter your delivery address" rows="3" required></textarea>
+            <input type="text" placeholder="Pincode" required>
+            <input type="text" placeholder="Mobile Number" required>
+            <button type="submit" class="btn">Confirm Order</button>
+        </form>
+    </div>
+</body>
+</html>
